@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-int sum_ofN(int n){
+int fact(int n){
 
     if(n==0){
         
-        return 0;
+        return 1;
     }
-    return n+sum_ofN(n-1);
+    return n*fact(n-1);
 }
 
 int main(){
@@ -14,6 +14,6 @@ int main(){
     cout<<"Enter the N value: ";
     cin>>n;
   
-    cout<<"The sum of  n numbers is:"<<sum_ofN(n);
+    cout<<"The sum of  n numbers is:"<<fact(n);
     return 0;
 }
